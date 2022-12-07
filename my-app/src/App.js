@@ -6,6 +6,7 @@ import DisplayBoard from './components/DisplayBoard';
 import CreateBook from './components/CreateBook';
 import { getAllBooks, createBook } from './services/BookService';
 import Footer from './components/Footer';
+import FetchButton from './components/FetchTodo';
 
 function App () {
 
@@ -13,7 +14,8 @@ function App () {
   const [books, setBooks] = useState([]);
   const [numberOfBooks, setNumberBooks] = useState(0);
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
       createBook(bookShelf)
         .then(() => {
           setNumberBooks(numberOfBooks+1);
@@ -55,7 +57,7 @@ function App () {
           getAllBook={getAllBook} 
         />
         <BookTable books={books} />
-        <Footer />
+        <FetchButton/>
       </div>
     </div>
   );

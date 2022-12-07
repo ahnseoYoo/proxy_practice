@@ -37,7 +37,7 @@ const CreateBook = ({ onChangeForm, handleSubmit }) => {
                     </div>
                     <button 
                         className="submit-button"
-                        onClick= {() => handleSubmit()}
+                        onClick= {(e) => handleSubmit(e)}
                     >Submit
                     </button>
                 </form>

@@ -13,5 +13,8 @@
     "express": "^4.17.1",
     "nodemon": "^2.0.4",
     "random-id": "^1.0.4"
+  },
+  "devDependencies": {
+    "http-proxy-middleware": "^2.0.6"
   }
 }

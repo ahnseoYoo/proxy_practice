@@ -1,3 +1,4 @@
+const { notStrictEqual } = require('assert');
 const express = require('express');
 const path = require('path');
 const app = express(),
@@ -20,6 +21,7 @@ app.get('/api/books', (req, res) => {
 });
 
 app.post('/api/book', (req, res) => {
+  // alert("Hello! I am an alert box!!");
   const book = req.body.book;
   console.log('Adding book:::::', book);
   books.push(book);
